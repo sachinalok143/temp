@@ -19,12 +19,8 @@ int main(int argc, char const *argv[])
 	string filename(argv[argc-1]);
 
 	cout<<COLOR_GREEN ""<<filename<<"" COLOR_RESET<<endl;
-	// char *command="ls ";
 	 string str = "gcc "; 
     str = str + " -o output " + filename +" -lm"; 
-  
-    // Convert string to const char * as system requires 
-    // parameter of type const char * 
     const char *command = str.c_str(); 
   
     cout << "Compiling file using " COLOR_RED << command<<"" COLOR_RESET << endl; 
