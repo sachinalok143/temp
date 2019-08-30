@@ -17,7 +17,8 @@ int main(int argc, char const *argv[])
 {
 
 	string filename(argv[argc-1]);
-
+	string temp(argv[argc-2]);
+	int count=stoi(temp);
 	cout<<COLOR_GREEN ""<<filename<<"" COLOR_RESET<<endl;
 	 string str = "gcc "; 
     str = str + " -o output " + filename +" -lm"; 
@@ -25,8 +26,8 @@ int main(int argc, char const *argv[])
   
     cout << "Compiling file using " COLOR_RED << command<<"" COLOR_RESET << endl; 
     system(command);  
-	int count;
-	cin>>count;
+// 	int count;
+// 	cin>>count;
 	for (int i = 0; i < count; ++i)
 	{
 		cout<< COLOR_GREEN "+++++++++++++++++++++++Running "<<i+1<<"th test case ++++++++++++++++++++++++" COLOR_RESET<< endl;
